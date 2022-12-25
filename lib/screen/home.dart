@@ -164,19 +164,45 @@ class _HomeState extends State<Home> {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Icon(
-            Icons.menu,
-            color: Colors.black,
-            size: 30,
+          GestureDetector(
+            child: Icon(
+              Icons.menu,
+              color: Colors.black,
+              size: 30,
+            ),
+
           ),
-          Container(
-            height: 40,
-            width: 40,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(20),
-              child: Image.asset('assets/image/bishal.jpg'),
+
+
+          // GestureDetector(
+          //   onTap: (){
+          //     print('Click in menu icon');
+          //
+          //
+          //   },
+          // ),
+          // Icon(
+          //   Icons.menu,
+          //   color: Colors.black,
+          //   size: 30,
+          // ),
+          GestureDetector(
+            onTap: (){
+              //print('Tap on image');
+              Navigator.pushNamed(context, '/profile');
+
+            },
+            child : Container(
+              height: 40,
+              width: 40,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(20),
+                child: Image.asset('assets/image/bishal.jpg'),
+              ),
             ),
           ),
+
+
         ],
       ),
     );
